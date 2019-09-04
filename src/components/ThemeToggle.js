@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext';
 
 class ThemeToggle extends Component {
@@ -16,4 +16,14 @@ class ThemeToggle extends Component {
     }
 }
 
-export default ThemeToggle
+const ThemeToggle2 = (props) => {
+    const { toggleTheme } = useContext(ThemeContext)
+
+    return (
+        <button onClick={toggleTheme}>
+            Toggle the theme
+        </button>
+    )
+}
+
+export default ThemeToggle2
